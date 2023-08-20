@@ -1,0 +1,46 @@
+
+callback settimeout
+const add = (x, y, callback) => {
+  setTimeout(() => {
+    callback(x + y);
+  }, 2000);
+};
+
+
+this code  will add two variables and pass the sum to a callback function after 2 seconds.
+_________________________________________________________________________
+codingame
+function job(){
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("hello world");
+      }, 2000);
+    });
+  }
+
+module.exports = job;
+_____________________________
+
+Promises
+
+
+function uppercaseString(str) {
+  return new Promise((resolve, reject) => {
+    if (str === null) {
+      reject();
+    } else {
+      resolve(str.toUpperCase());
+    }
+  });
+}
+
+uppercaseString("hello")
+  .then((result) => {
+    console.log(result); 
+  })
+  .catch((error) => {
+    console.error(error); 
+  });
+
+
+  
